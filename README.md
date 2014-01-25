@@ -1,4 +1,6 @@
 To Do:
+- [ ] Sign up/in share same form
+- [ ] Style log in and add link to sign up
 - [ ] All pages require log in
 - [ ] Root page should show assigned chores with dates
 - [ ] Admin can assign people chores, create chores

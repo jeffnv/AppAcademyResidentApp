@@ -1,24 +1,11 @@
-<h1>Sign In</h1>
+<% action = session_url %>
+<% method = "post" %>
+<% message = "Sign In" %>
 
-<form action="<%= session_url %>" method="post">
-  <input
-     name="authenticity_token"
-     type="hidden"
-     value="<%= form_authenticity_token %>">
+<%= render "shared/form", 
+    :user => @user, 
+    :action => action, 
+    :method => method, 
+    :message => message %>
 
-  <label for="user_username">Username</label>
-  <input
-     id="user_email"
-     name="user[email]"
-     type="text">
-  <br>
-
-  <label for="user_password">Password</label>
-  <input
-     id="user_password"
-     name="user[password]"
-     type="password">
-  <br>
-
-  <input type="submit" value="Log in">
-</form>
+<p>No account? <a href="<%=new_user_url%>">Sign Up Here</a></p>

@@ -1,3 +1,11 @@
-<h1>Create User</h1>
+<% action = (@user.persisted? ? user_url(@user) : users_url) %>
+<% method = (@user.persisted? ? "put" : "post") %>
+<% message = (@user.persisted? ? "Update user" : "Create user") %>
 
-<%= render "form", :user => @user %>
+<%= render "shared/form", 
+    :user => @user, 
+    :action => action, 
+    :method => method, 
+    :message => message %>
+
+<p>Already have an account? <a href="<%=new_session_url%>">Log In Here</a></p>
