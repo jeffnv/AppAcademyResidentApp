@@ -1,4 +1,5 @@
 To Do:
+- [ ] All pages require log in
 - [ ] Root page should show assigned chores with dates
 - [ ] Admin can assign people chores, create chores
 - [ ] Admin can remove chores from people
