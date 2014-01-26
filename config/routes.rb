@@ -4,7 +4,7 @@ AppResidentApp::Application.routes.draw do
 
   get "static_pages/admin"
 
-  resources :users, :only => [:create, :new, :show]
+  resources :users, :only => [:create, :new, :show, :index]
   resource :session, :only => [:create, :destroy, :new]
   resources :chores
 

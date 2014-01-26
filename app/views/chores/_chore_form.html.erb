@@ -1,0 +1,12 @@
+<form action="<%=chores_url%>" method="post" accept-charset="utf-8">
+  <input type="hidden" 
+    name="authenticity_token" 
+    value="<%=form_authenticity_token%>"  />
+  <label for="chore_name">Chore</label>
+  <input 
+    type="text" 
+    name="chore[name]" 
+    id="chore_name" 
+    value="" 
+    placeholder="chore name..." />
+</form>
