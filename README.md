@@ -17,6 +17,7 @@ To Do:
 - [ ] People can mark chores done
 
 **Chores**
+- [ ] Chores can be saved without assignee
 - [ ] Root page should show assigned chores with dates
 - [ ] Admin can assign people chores, create chores
 - [ ] Admin can remove chores from people

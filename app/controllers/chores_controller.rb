@@ -1,4 +1,5 @@
 class ChoresController < ApplicationController
+  before_filter :require_current_user!
   before_filter :require_admin!, :only => :create
 
   def index
