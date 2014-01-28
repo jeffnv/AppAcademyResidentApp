@@ -1,5 +1,9 @@
 AppResidentApp::Application.routes.draw do
 
+  get "user_chores/index"
+
+  get "user_chores/show"
+
   get "static_pages/root"
 
   get "static_pages/admin"
