@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password
+  attr_accessible :email, :password, :name, :current_resident
   attr_reader :password
 
   validates :password_digest, :presence => { :message => "Password can't be blank" }
@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   validates :email, :presence => true
 
   after_initialize :ensure_session_token
+  has_many :user_chores
 
   def self.find_by_credentials(email, password)
     user = User.find_by_email(email)

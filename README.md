@@ -10,11 +10,13 @@ To Do:
 - [ ] Not done chores alert admin
 - [ ] Users need a name, cohort, and info on their moved in status
 - [ ] Admin can change peoples residential status
+- [ ] admin can generate user-chores with null user id based on freq
 
 **Users**
 - [ ] System emails user if they have a chore to do that day.
 - [ ] People can 'move out' and be removed from the chore list
 - [ ] People can mark chores done
+- [ ] Add associations
 
 **Chores**
 - [ ] Chores can be saved without assignee
@@ -23,3 +25,6 @@ To Do:
 - [ ] Admin can remove chores from people
 - [ ] Chores should have a frequency
 - [ ] Show page of chore should show next scheduled occurences and assignee
+- [ ] add validations
+- [ ] add associations
+
