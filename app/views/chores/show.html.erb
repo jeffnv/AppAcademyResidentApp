@@ -1,4 +1,15 @@
 <h1><%= @chore.name %></h1>
+<ul>
+  <%@chore.user_chores.each do |user_chore|%>
+  <li><%="#{user_chore.date}"%>
+    <% if user_chore.user_id? %>
+      <%= user_chore.user.name %>
+    <% else %>
+      <%= button_to "Assign Chore", chores_url %>
+    <% end %>
+  </li>
+  <%end%>
+</ul>
 <p>
 <%= @chore.to_json %>
 </p>

@@ -16,14 +16,14 @@ class Chore < ActiveRecord::Base
     next_monday = Date.today.next_week
     days = self.frequency.split(',')
     chores = []
+
     (1..weeks).each do |week_index|
       days.each do |day|
        chores << self.user_chores.build(:date => next_monday + DAY_OFFSETS[day])
       end
+      next_monday = next_monday.next_week
     end
 
     self.user_chores << chores
-
-    next_monday = next_monday.next_week
   end
 end
