@@ -28,3 +28,10 @@ To Do:
 - [ ] add validations
 - [ ] add associations
 
+ideas:
+screens:
+1. User screen shows currently assigned chores. Can also see past chores.
+2. Chore screen shows all currently assigned and upcoming chores.
+3. Admin screen allows them to randomly assign all chores
+4. People can volunteer for unnassigned tasks.
+5. Tasks not volunteered for within a week are randomly assigned.

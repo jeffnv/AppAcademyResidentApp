@@ -12,6 +12,7 @@ group :development do
   gem 'binding_of_caller'
 end
 
+gem 'backbone-on-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'jquery-rails'
 gem 'pg'
