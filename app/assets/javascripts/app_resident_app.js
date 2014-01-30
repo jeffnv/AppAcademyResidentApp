@@ -4,10 +4,11 @@ window.AppResidentApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    //make a collection of user chores
+    //on success, do the following
+    new AppResidentApp.Routers.Router();
+    Backbone.history.start();
+
   }
 };
 
-$(document).ready(function(){
-  AppResidentApp.initialize();
-});

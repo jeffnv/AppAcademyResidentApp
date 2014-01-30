@@ -1,5 +1,6 @@
 class UserChoresController < ApplicationController
   def index
+    @user_chores = UserChore.includes(:user, :chore)
   end
 
   def show

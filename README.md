@@ -35,3 +35,6 @@ screens:
 3. Admin screen allows them to randomly assign all chores
 4. People can volunteer for unnassigned tasks.
 5. Tasks not volunteered for within a week are randomly assigned.
+6. All signed in users see the same hope page, upcoming chores and their
+   assigned users. If the user is an admin, the button says 'assign', otherwise
+   volunteer.
