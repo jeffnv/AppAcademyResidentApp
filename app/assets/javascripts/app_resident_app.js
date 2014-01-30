@@ -6,8 +6,11 @@ window.AppResidentApp = {
   initialize: function() {
     //make a collection of user chores
     //on success, do the following
-    new AppResidentApp.Routers.Router();
+    AppResidentApp.userChores = new AppResidentApp.Collections.UserChores();
+    AppResidentApp.userChores.fetch({success: function(){
+    new AppResidentApp.Routers.Router({$rootEl: $('#content')});
     Backbone.history.start();
+    }});
 
   }
 };

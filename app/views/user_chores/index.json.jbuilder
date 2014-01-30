@@ -1,6 +1,7 @@
 json.array! @user_chores do |user_chore|
   json.(
     user_chore, 
+    :id,
     :user_id, 
     :chore_id, 
     :date, 
