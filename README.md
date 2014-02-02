@@ -38,3 +38,8 @@ screens:
 6. All signed in users see the same hope page, upcoming chores and their
    assigned users. If the user is an admin, the button says 'assign', otherwise
    volunteer.
+7. index has buttons for assign if admin, volunteer if user
+
+simon:
+twilio integration? could send a text
+not random, want score to make sure it's fair

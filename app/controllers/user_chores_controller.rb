@@ -15,4 +15,12 @@ class UserChoresController < ApplicationController
 
     redirect_to chore_url @user_chore.chore
   end
+
+  def assign_group
+    @user_chores = UserChore.where(:id => params[:user_chore_ids])
+    @user_chores.update_all(:user_id => -1)
+    #NEED TO make this randomish, but fair. Should assign to deserving users.
+    render :json => @user_chores.all
+
+  end
 end
