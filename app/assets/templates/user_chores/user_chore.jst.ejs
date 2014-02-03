@@ -1,2 +1,9 @@
 <%=user_chore.escape('date')%> - <%=user_chore.escape('chore_name')%>
-
+<br>
+<p>
+  <%if(user_chore.get('assignee') != "none"){%>
+    Assigned: <%= user_chore.escape('assignee') %>
+  <%}else{%>
+    <a class="btn btn-primary">Assign</a>
+  <%}%>
+</p>
