@@ -1,4 +1,10 @@
 To Do:
+- [ ] Volunteer button for user assigns them chore.
+- [ ] Assign button for admin works.
+- [ ] Assign all chores only visible for admin.
+- [ ] Improve styling of upcoming chores list.
+
+Done:
 - [x] Sign up/in share same form
 - [x] Style log in and add link to sign up
 - [x] All pages require log in

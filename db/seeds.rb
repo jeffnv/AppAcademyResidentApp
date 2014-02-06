@@ -11,14 +11,14 @@ a.save
     :email => Faker::Internet.free_email,
     :name => Faker::Name.name,
     :current_resident => true,
-    :password => Faker::Internet.password
+    :password => "password"
   )
 end
 
 User.create(
   :email => "user@user.com",
   :name => "Joe User",
-  :password => "asdfasdf",
+  :password => "password",
   :current_resident => true
 )
 
