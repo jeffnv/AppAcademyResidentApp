@@ -6,6 +6,7 @@
     AppResidentApp.admin = <%=current_user ? current_user.admin : false %>;
     AppResidentApp.user = <%=current_user.to_json(:only => [:id, :name, :email, :admin]).html_safe%>
     AppResidentApp.users = <%=@user_json.html_safe%>
+    AppResidentApp.chores = <%=@chore_json.html_safe%>
     AppResidentApp.initialize();
   });
 </script>

@@ -1,11 +1,15 @@
 AppResidentApp.Views.UserChoresIndex = Backbone.View.extend({
+  initialize: function(options){
+    this.listenTo(this.collection, "all", this.render);
+  },
   template: JST["user_chores/index"],
   events: {
     'click #assign-all-button': 'assignAll'
   },
   render: function(){
     var that = this;
-    this.$el.html(this.template());
+    var admin = AppResidentApp.user.admin;
+    this.$el.html(this.template({ admin: admin }));
     this.collection.each(function(user_chore){
       that.$el.append(new AppResidentApp.Views.UserChore({
           model: user_chore

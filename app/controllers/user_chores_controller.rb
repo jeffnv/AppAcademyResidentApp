@@ -1,6 +1,6 @@
 class UserChoresController < ApplicationController
   def index
-    @user_chores = UserChore.includes(:user, :chore)
+    @user_chores = UserChore.includes(:user, :chore).order(:date)
   end
 
   def show
@@ -16,6 +16,17 @@ class UserChoresController < ApplicationController
     redirect_to chore_url @user_chore.chore
   end
 
+  def update
+    @user_chore = UserChore.find(params[:id])
+    p params[:user_chore]
+    if @user_chore.update_attributes(params[:user_chore])
+      status = 200
+    else
+      status = 422
+    end
+    render :json => @user_chore, :status => status
+  end
+
   def assign_group
     @user_chores = UserChore.where(:id => params[:user_chore_ids])
     random_users = User.pluck(:id).sample(@user_chores.count)
@@ -24,7 +35,7 @@ class UserChoresController < ApplicationController
       chore.save
     end
     #NEED TO make this randomish, but fair. Should assign to deserving users.
-    render :json => @user_chores
+    render :json => @user_chores.include(:user, :chore)
 
   end
 end

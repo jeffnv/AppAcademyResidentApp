@@ -3,6 +3,7 @@ To Do:
 - [ ] Assign button for admin works.
 - [ ] Assign all chores only visible for admin.
 - [ ] Improve styling of upcoming chores list.
+- [ ] User names should be links to show pages.
 
 Done:
 - [x] Sign up/in share same form

@@ -1,5 +1,7 @@
 <div class="row">
-  <h1>Upcoming Chores <button id="assign-all-button" class="btn btn-success">Assign All Chores</button></h1>
+  <% if(admin) { %>
+    <h1>Upcoming Chores <button id="assign-all-button" class="btn btn-success">Assign All Chores</button></h1>
+  <% } %>
 </div>
 
 <div id="user_chores">

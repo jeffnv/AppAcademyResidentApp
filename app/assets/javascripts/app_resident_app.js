@@ -11,7 +11,8 @@ window.AppResidentApp = {
     );
     AppResidentApp.userChores = new AppResidentApp.Collections.UserChores();
     AppResidentApp.userChores.fetch({success: function(){
-    new AppResidentApp.Routers.Router({$rootEl: $('#content')});
+      new AppResidentApp.Routers.Router({$rootEl: $('#content')});
+    AppResidentApp.chores = new AppResidentApp.Collections.Chores(AppResidentApp.chores);
     Backbone.history.start();
     }});
 
