@@ -2,8 +2,8 @@ To Do:
 - [ ] Chores list is backbone view
 - [ ] Can generate more chores.
 - [ ] User can mark chore complete on the day it is due.
+- [ ] Or also the day after it is due. Two days later it expires.
 - [ ] Assign button for admin works.
-- [ ] Improve styling of upcoming chores list.
 - [ ] User names should be links to show pages.
 
 Done:
