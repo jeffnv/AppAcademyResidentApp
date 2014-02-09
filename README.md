@@ -1,11 +1,14 @@
 To Do:
-- [ ] Volunteer button for user assigns them chore.
+- [ ] Chores list is backbone view
+- [ ] Can generate more chores.
+- [ ] User can mark chore complete on the day it is due.
 - [ ] Assign button for admin works.
-- [ ] Assign all chores only visible for admin.
 - [ ] Improve styling of upcoming chores list.
 - [ ] User names should be links to show pages.
 
 Done:
+- [x] Volunteer button for user assigns them chore.
+- [x] Assign all chores only visible for admin.
 - [x] Sign up/in share same form
 - [x] Style log in and add link to sign up
 - [x] All pages require log in

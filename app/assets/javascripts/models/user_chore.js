@@ -1,7 +1,9 @@
 AppResidentApp.Models.UserChore = Backbone.Model.extend({
+
   choreName: function(){
     return AppResidentApp.chores.get(this.get('chore_id')).escape('name');
   },
+
   assigned: function(){
     return this.get('user_id') ? true : false;
   },
