@@ -1,12 +1,12 @@
 To Do:
-- [ ] Chores list is backbone view
-- [ ] Can generate more chores.
+- [ ] Admin Can generate more chores.
 - [ ] User can mark chore complete on the day it is due.
 - [ ] Or also the day after it is due. Two days later it expires.
 - [ ] Assign button for admin works.
 - [ ] User names should be links to show pages.
 
 Done:
+- [x] Chores list is backbone view
 - [x] Volunteer button for user assigns them chore.
 - [x] Assign all chores only visible for admin.
 - [x] Sign up/in share same form
