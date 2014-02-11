@@ -1,7 +1,15 @@
 AppResidentApp.Views.ChoreIndex = Backbone.View.extend({
-  template: EJS['chores/chore_index'],
+  template: JST['chores/chore_index'],
   render: function(){
-    this.html(this.template());
+    this.$el.html(this.template());
+    var $el = this.$el;
+    this.collection.each(function(chore){
+      $el.find('#chore-list').append(
+        new AppResidentApp.Views.Chore({
+          model: chore
+        }).render().$el
+      );
+    });
     return this;
   }
 });

@@ -4,12 +4,19 @@ AppResidentApp.Routers.Router = Backbone.Router.extend({
   },
   routes: {
     '': 'index',
+    'chores': 'choreIndex'
   },
   index: function () {
     var indexView = new AppResidentApp.Views.UserChoresIndex({
       collection: AppResidentApp.userChores
     });
     this._swap(indexView);
+  },
+  choreIndex: function(){
+    var choreIndex = new AppResidentApp.Views.ChoreIndex({
+      collection: AppResidentApp.chores
+    });
+    this._swap(choreIndex);
   },
   _swap: function(newView){
     if (this._currentView) {

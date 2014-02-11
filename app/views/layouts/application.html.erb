@@ -14,12 +14,12 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#demo-project-navbar-collapse-1">
           &#9776;
         </button>
-        <%= link_to "App Academy Residents", root_url, :class => "navbar-brand"%>
+        <%= link_to "App Academy Residents", '/#', :class => "navbar-brand"%>
       </div>
       <div class="collapse navbar-collapse" id="demo-project-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-left">
           <% if current_user %>
-          <li><%= link_to "Chores", chores_url %></li>
+          <li><%= link_to "Chores", '/#chores' %></li>
           <li><%= link_to "Peeps", users_url %></li>
           <% end %>
         </ul>
