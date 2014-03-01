@@ -53,3 +53,10 @@ screens:
 simon:
 twilio integration? could send a text
 not random, want score to make sure it's fair
+
+flarnie:
+- [ ] Users have a name, cohort, and info on their moved in status
+- [ ] Links to user show pages on 'peeps'
+- [ ] Admin can make new chores
+- [ ] Admin can assign chores
+- [ ] Style with a orange theme and blue highlights 

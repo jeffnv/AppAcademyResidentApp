@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       self.current_user = @user
       redirect_to root_url
+		else
       render :json => @user.errors.full_messages
     end
   end
