@@ -1,8 +1,23 @@
 <div class="row">
   <% if(admin) { %>
     <h1>Upcoming Chores <button id="assign-all-button" class="btn btn-success">Assign All Chores</button></h1>
+    <form>
+      <h2>Create another Chore</h2>
+      <label for="chore_name">Name:</label>
+      <input type="text" id="chore_name" name="chore[name]">
+      <br>
+      <label for="chore_description">Description:</label>
+      <textarea id="chore_description" name="chore[description]">
+      </textarea>
+      <br>
+      <label for="chore_frequency">Frequency:</label>
+      <input type="text" id="chore_frequency" name="chore[frequency]">
+      <br>
+      <input type="submit" id="submit-new-chore" value="Save Chore">     
+    </form>
   <% } %>
-</div>
 
+</div>
+<h2>Chores:<h2>
 <div id="user_chores">
 </div>

@@ -1,1 +1,3 @@
-AppResidentApp.Models.Chore = Backbone.Model.extend({});
+AppResidentApp.Models.Chore = Backbone.Model.extend({
+  url: "/chores"
+});

@@ -1,5 +1,5 @@
 AppResidentApp.Views.Chore = Backbone.View.extend({
-  tagName: 'li',
+ tagName: 'li',
   template: JST['chores/chore'],
   render: function(){
     this.$el.html(this.template({

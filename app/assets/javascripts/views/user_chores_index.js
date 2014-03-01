@@ -4,7 +4,8 @@ AppResidentApp.Views.UserChoresIndex = Backbone.View.extend({
   },
   template: JST["user_chores/index"],
   events: {
-    'click #assign-all-button': 'assignAll'
+   'click input#submit-new-chore': 'createChore',
+   'click #assign-all-button': 'assignAll'
   },
   render: function(){
     var that = this;
@@ -16,6 +17,22 @@ AppResidentApp.Views.UserChoresIndex = Backbone.View.extend({
       }).render().$el)
     });
     return this;
+  },
+ 
+  createChore: function(event){
+    event.preventDefault();
+    console.log("creating a chore");
+    var choreData = $(event.target).closest("form").serializeJSON();
+    var newChore = new AppResidentApp.Models.Chore(choreData);
+    newChore.save({}, {
+      success: function(model){
+        that.collection.add(model);
+        console.log("success!");
+               },
+      error: function(model, response, thirdThing){
+        console.log("error! ", response, thirdThing);
+             }
+    });
   },
 
   assignAll: function(event){
