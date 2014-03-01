@@ -8,6 +8,35 @@
         type="hidden"
         value="<%= form_authenticity_token %>">
 
+        <% if @user && !(@user.persisted?) %>
+          <label for="user_name">Name</label>
+          <input
+          class="form-control"
+          id="user_name"
+          name="user[name]"
+          type="text">
+          <br>
+          <% unless Cohort.all.empty? %> 
+            <label for="user_cohort">Cohort</label>
+            <select
+            class="form-control"
+            id="user_cohort"
+            name="user[cohort_id]">
+              <% Cohort.all.each do |cohort| %>
+                <option value="<%= cohort.id %>"><%= cohort.name %></option>
+              <% end %>
+            </select>
+            <br>
+          <% end %>
+
+          <label for="user_moved_in">Move-In Date</label>
+          <input type="date"
+          id="user_moved_in"
+          name="user[moved_in]">
+          <br>
+
+        <% end %>
+
         <label for="user_email">Email</label>
         <input
         class="form-control"

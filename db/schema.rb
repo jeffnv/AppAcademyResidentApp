@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140127231539) do
+ActiveRecord::Schema.define(:version => 20140301183224) do
 
   create_table "chores", :force => true do |t|
     t.string   "name",        :null => false
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(:version => 20140127231539) do
     t.datetime "updated_at",  :null => false
     t.text     "description"
     t.string   "frequency"
+  end
+
+  create_table "cohorts", :force => true do |t|
+    t.datetime "start_date"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "user_chores", :force => true do |t|
@@ -42,8 +49,11 @@ ActiveRecord::Schema.define(:version => 20140127231539) do
     t.boolean  "admin",            :default => false, :null => false
     t.string   "name"
     t.boolean  "current_resident", :default => false, :null => false
+    t.integer  "cohort_id"
+    t.datetime "moved_in"
   end
 
+  add_index "users", ["cohort_id"], :name => "index_users_on_cohort_id"
   add_index "users", ["email"], :name => "index_users_on_username", :unique => true
   add_index "users", ["session_token"], :name => "index_users_on_session_token", :unique => true
 

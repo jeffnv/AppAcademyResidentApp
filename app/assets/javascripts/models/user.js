@@ -1,1 +1,3 @@
-AppResidentApp.Models.User = Backbone.Model.extend({});
+AppResidentApp.Models.User = Backbone.Model.extend({
+  url: "/users"
+});

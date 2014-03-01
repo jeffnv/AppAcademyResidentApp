@@ -1,0 +1,15 @@
+<% if (user){ %>
+  <h1>Profile for: <%= user.escape("name") %></h1>
+  <p><b>Name:</b><%= user.escape("name") %></p> 
+  <p><b>Email:</b><%= user.escape("email") %></p> 
+  <p><b>Current Resident?:</b>
+  <% if(user.escape("current_resident") == "true"){ %>
+    Yes
+  <% } else { %>
+    No
+  <% } %>
+  <p><b>Move In Date:</b><%= user.escape("moved_in") %></p>
+<% } else { %>
+  <h1>User not found!</h1>
+  <p>There is no user with that id.</p>
+<% } %>
