@@ -66,3 +66,5 @@ flarnie:
 - [ ] Bug: Back button returns JSON when visiting user profiles
 - [ ] Users by cohort index
 - [ ] Admin CRUD of cohorts
+- [ ] More secure partition of admin interface from regular
+- [ ] Chore creation form should go in a modal
