@@ -57,7 +57,7 @@ not random, want score to make sure it's fair
 flarnie:
 - [x] Users have a name, cohort, and info on their moved in status
 - [x] Links to user show pages on 'peeps'
-- [ ] Admin can make new chores
+- [x] Admin can make new chores
 - [ ] Admin can assign chores
 - [ ] Style with a orange theme and blue highlights 
 
@@ -68,3 +68,4 @@ flarnie:
 - [ ] Admin CRUD of cohorts
 - [ ] More secure partition of admin interface from regular
 - [ ] Chore creation form should go in a modal
+- [ ] Fix up the admin user-chore index; it's borked
