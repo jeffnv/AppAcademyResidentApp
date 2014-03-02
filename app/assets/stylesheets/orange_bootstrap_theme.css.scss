@@ -1,0 +1,44 @@
+/* Orange color scheme with blue highlights */
+
+$light-yellow: #FFC740; 
+$dark-yellow: #A67500;
+$light-orange: #FFA240;
+$dark-orange: #A65500;
+$main-orange: #FF8300;
+$light-blue: #61B4CF;
+$dark-blue: #024E68;
+$light-red: #FF8973;
+$dark-red: #A61A00;
+
+/* Customize bootstrap var.s */
+
+$link-color: $main-orange;
+$component-active-color: $light-yellow;
+$component-active-bg: $dark-yellow;
+
+$btn-primary-bg: $light-blue;
+$btn-primary-color: $dark-blue !default;
+$btn-success-bg: $light-yellow;
+$btn-success-color: $dark-yellow !default;
+$btn-info-bg: $light-blue;
+$btn-info-color: $dark-blue !default;
+$btn-warning-bg: $light-orange;
+$btn-warning-color: $dark-orange !default;
+$btn-danger-bg: $light-red;
+$btn-danger-color: $dark-red !default;
+
+$dropdown-bg: $light-yellow !default;
+$dropdown-border: $main-orange;
+$dropdown-divider-bg: $main-orange;
+$dropdown-link-color: $dark-yellow;
+$dropdown-link-hover-color: $light-yellow;
+$dropdown-link-hover-bg: $dark-yellow;
+
+$navbar-default-color: $dark-orange !default;
+$navbar-default-bg: $light-orange !default;
+$navbar-default-border: $main-orange !default;
+$navbar-default-link-color: $dark-orange;
+$navbar-default-link-hover-color: darken($dark-orange, 5%);
+$navbar-default-toggle-hover-bg: darken($navbar-default-bg, 5%);
+$navbar-default-toggle-icon-bar-bg: $dark-orange;
+$navbar-default-toggle-border-color: $main-orange;
