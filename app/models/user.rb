@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
   has_many :user_chores
 
+  def self.non_admin_users
+    where(:admin => false)
+  end
+
   def self.find_by_credentials(email, password)
     user = User.find_by_email(email)
 

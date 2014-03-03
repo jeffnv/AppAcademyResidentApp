@@ -1,5 +1,8 @@
 To Do:
+- [ ] In Chore list, chores are links
+- [ ] Chore link goes to list of only the certain chore
 - [ ] Admin Can generate more chores.
+- [ ] Admin can create new chores
 - [ ] User can mark chore complete on the day it is due.
 - [ ] Or also the day after it is due. Two days later it expires.
 - [ ] Assign button for admin works.

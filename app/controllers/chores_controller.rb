@@ -14,11 +14,13 @@ class ChoresController < ApplicationController
   end
 
   def create
+    puts "here come params*************"
+    p params
     @chore = Chore.new(params[:chore])
     if !@chore.save
-      flash.now = @chore.errors.full_messages
+      render :json => @chore.errors.full_messages
+    else
+      render :json => @chore
     end
-    @chores = Chore.all
-    render :index
   end
 end

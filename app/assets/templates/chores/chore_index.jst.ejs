@@ -1,2 +1,7 @@
-<h1>Chores!!</h1>
+<h1>Chores!! 
+  <% if(AppResidentApp.user.admin){%>
+  <a class="btn btn-primary" id="show-chore-modal">Create New Chore</a>
+  <% } %>
+</h1>
 <ul id="chore-list"></ul>
+

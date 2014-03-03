@@ -29,7 +29,7 @@ class UserChoresController < ApplicationController
 
   def assign_group
     @user_chores = UserChore.where(:id => params[:user_chore_ids])
-    random_users = User.pluck(:id).sample(@user_chores.count)
+    random_users = User.non_admin_users.pluck(:id).sample(@user_chores.count)
     @user_chores.each_with_index do |chore, index|
       chore.user_id = random_users[index]
       chore.save
