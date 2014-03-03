@@ -4,7 +4,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where(:admin => false)
-    render :index
+    respond_to do |format|
+      format.html
+      format.json { render :json => @users }
+    end
   end
 
   def create
@@ -13,6 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       self.current_user = @user
       redirect_to root_url
+    else
       render :json => @user.errors.full_messages
     end
   end

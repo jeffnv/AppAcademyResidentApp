@@ -4,7 +4,8 @@ AppResidentApp.Routers.Router = Backbone.Router.extend({
   },
   routes: {
     '': 'index',
-    'chores': 'choreIndex'
+    'chores': 'choreIndex',
+    'users/:id': 'userShow'
   },
   index: function () {
     var indexView = new AppResidentApp.Views.UserChoresIndex({
@@ -17,6 +18,14 @@ AppResidentApp.Routers.Router = Backbone.Router.extend({
       collection: AppResidentApp.chores
     });
     this._swap(choreIndex);
+  },
+  userShow: function(id){
+    console.log("showing user with id of ", id);
+    var user = AppResidentApp.users.get(id);
+    var userShowView = new AppResidentApp.Views.UserShow({
+      model: user
+    });
+    this._swap(userShowView);
   },
   _swap: function(newView){
     if (this._currentView) {

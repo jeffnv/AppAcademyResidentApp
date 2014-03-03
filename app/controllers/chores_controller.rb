@@ -19,6 +19,6 @@ class ChoresController < ApplicationController
       flash.now = @chore.errors.full_messages
     end
     @chores = Chore.all
-    render :index
+    render :json => @chore
   end
 end

@@ -53,3 +53,21 @@ screens:
 simon:
 twilio integration? could send a text
 not random, want score to make sure it's fair
+
+flarnie:
+- [x] Users have a name, cohort, and info on their moved in status
+- [x] Links to user show pages on 'peeps'
+- [x] Admin can make new chores
+- [ ] Admin can assign chores (How is this supposed to work?)
+- [x] Style with a orange theme and blue highlights 
+
+- [ ] More glyphicons with font awesome?
+- [ ] Integration specs?
+- [ ] Bug: Back button returns JSON when visiting user profiles
+- [ ] Users by cohort index
+- [ ] Admin CRUD of cohorts
+- [ ] More secure partition of admin interface from regular
+- [ ] Chore creation form should go in a modal
+- [ ] Fix up the admin user-chore index; it's borked
+- [ ] Should users be 'current_resident' by default?
+- [ ] Use a scope to only deal with current residents?
