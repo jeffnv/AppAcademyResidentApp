@@ -13,6 +13,10 @@ AppResidentApp.Views.Chore = Backbone.View.extend({
   },
 
   choreClicked: function (event) {
-    alert('clicked ' + this.model.escape('name'));
-  },
+    Backbone.history.navigate(
+      "chores/" + this.model.id, {
+        trigger: true
+      }
+    );
+  }
 });

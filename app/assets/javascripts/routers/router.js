@@ -1,10 +1,11 @@
 AppResidentApp.Routers.Router = Backbone.Router.extend({
-  initialize: function(options){
+  initialize: function (options) {
     this.$rootEl = options.$rootEl;
   },
   routes: {
     '': 'index',
-    'chores': 'choreIndex'
+    'chores': 'choreIndex',
+    'chores/:id': 'choreShow',
   },
   index: function () {
     var indexView = new AppResidentApp.Views.UserChoresIndex({
@@ -12,13 +13,16 @@ AppResidentApp.Routers.Router = Backbone.Router.extend({
     });
     this._swap(indexView);
   },
-  choreIndex: function(){
+  choreIndex: function () {
     var choreIndex = new AppResidentApp.Views.ChoreIndex({
       collection: AppResidentApp.chores
     });
     this._swap(choreIndex);
   },
-  _swap: function(newView){
+  choreShow: function (id) {
+               //stuff goes here
+  },
+  _swap: function (newView) {
     if (this._currentView) {
       this._currentView.remove();
     }
